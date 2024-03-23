@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { nanoid } from "nanoid";
 // import "./App.css";
 import ContactList from "./components/ContactList/ContactList";
-import SearchBar from "./components/SearchBar/SearchBar";
+import SearchBox from "./components/SearchBox/SearchBox";
 import ContactForm from "./components/ContactForm/ContactForm";
 
 const defaultContacts = [
@@ -50,7 +50,7 @@ function App() {
 		<>
 			<h1>Phonebook</h1>
 			<ContactForm getContacts={getContacts} />
-			<SearchBar filter={filter} onChangeFilter={onChangeFilter} />
+			<SearchBox filter={filter} onChangeFilter={onChangeFilter} />
 			<ContactList contacts={filteredContacts} deleteContact={deleteContact} />
 		</>
 	);
